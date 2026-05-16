@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mercy Global English adalah program pembelajaran bahasa Inggris dan IELTS Preparation yang profesional, terarah, interaktif, dan relevan untuk pelajar serta santri." />
+  <title>Mercy Global English | IELTS Preparation & English Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{
+      --green-980:#03180f;
+      --green-950:#062817;
+      --green-900:#083a23;
+      --green-800:#0c5833;
+      --green-700:#0f7a45;
+      --green-600:#129456;
+      --green-100:#e9f8f0;
+      --gold-700:#c58d00;
+      --gold-600:#f0b20a;
+      --gold-500:#ffc938;
+      --gold-100:#fff2bf;
+      --cream:#fbfaf4;
+      --paper:#ffffff;
+      --ink:#102219;
+      --muted:#5e7168;
+      --soft-line:rgba(10, 78, 45, .13);
+      --white-line:rgba(255,255,255,.16);
+      --shadow:0 24px 70px rgba(6,40,23,.12);
+      --shadow-xl:0 36px 120px rgba(3,24,15,.28);
+      --radius-2xl:38px;
+      --radius-xl:30px;
+      --radius-lg:22px;
+      --ease:cubic-bezier(.16,1,.3,1);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:17px}
+    body{
+      min-height:100vh;
+      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 6% 0%, rgba(255,201,56,.16), transparent 27rem),
+        radial-gradient(circle at 96% 12%, rgba(18,148,86,.12), transparent 28rem),
+        linear-gradient(180deg,#fffdf7 0%,#f5f8f1 42%,#fff 100%);
+      overflow-x:hidden;
+      line-height:1.75;
+    }
+    body.no-scroll{overflow:hidden}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    ::selection{background:var(--gold-500);color:var(--green-980)}
+    .container{width:min(1220px,calc(100% - 44px));margin-inline:auto}
+    .section{position:relative;padding:118px 0;overflow:hidden}
+    .accent{color:var(--gold-500)}
+    h1,h2,h3,h4{line-height:1.06;color:var(--green-950)}
+    h1,h2{font-family:"Playfair Display",Georgia,serif;letter-spacing:-.045em}
+    h1{font-size:clamp(3.45rem,7.4vw,7.7rem)}
+    h2{font-size:clamp(2.45rem,4.5vw,4.55rem)}
+    h3{font-size:1.42rem;letter-spacing:-.025em}
+    p{font-size:1rem}
+    .lead{color:var(--muted);font-size:clamp(1.08rem,1.2vw,1.24rem);max-width:760px;line-height:1.75}
+    .section-head{max-width:880px;text-align:center;margin:0 auto 64px}
+    .section-head .lead{margin:18px auto 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 16px;margin-bottom:20px;border-radius:999px;
+      font-size:.8rem;font-weight:950;letter-spacing:.13em;text-transform:uppercase;
+      color:var(--green-800);background:rgba(255,255,255,.78);border:1px solid var(--soft-line);
+      box-shadow:0 14px 32px rgba(6,40,23,.06);backdrop-filter:blur(14px)
+    }
+    .eyebrow i{color:var(--gold-600)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:11px;border:0;border-radius:18px;
+      padding:15px 24px;font-size:.98rem;font-weight:950;cursor:pointer;white-space:nowrap;
+      transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)
+    }
+    .btn-primary{background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;box-shadow:0 20px 46px rgba(12,88,51,.27)}
+    .btn-primary:hover{transform:translateY(-5px);box-shadow:0 30px 68px rgba(12,88,51,.36)}
+    .btn-gold{background:linear-gradient(135deg,var(--gold-600),var(--gold-500));color:var(--green-980);box-shadow:0 20px 46px rgba(240,178,10,.28)}
+    .btn-gold:hover{transform:translateY(-5px);box-shadow:0 30px 68px rgba(240,178,10,.38)}
+    .btn-light{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(14px)}
+    .btn-light:hover{background:#fff;color:var(--green-950);transform:translateY(-5px)}
+    .btn-outline{background:#fff;border:1px solid var(--soft-line);color:var(--green-900);box-shadow:0 12px 30px rgba(6,40,23,.06)}
+    .btn-outline:hover{background:var(--green-900);color:#fff;transform:translateY(-5px)}
+
+    .texture{position:absolute;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(rgba(255,255,255,.35) 1px, transparent 1px);background-size:18px 18px;mask-image:linear-gradient(180deg,#000,transparent)}
+    .shine{position:absolute;inset:-1px;overflow:hidden;border-radius:inherit;pointer-events:none}
+    .shine::after{content:"";position:absolute;top:-120%;left:-70%;width:44%;height:300%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);transform:rotate(24deg);animation:cardShine 6s ease-in-out infinite}
+    @keyframes cardShine{0%,55%{left:-70%}80%,100%{left:130%}}
+
+    /* Loader */
+    .loader{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:linear-gradient(135deg,#fff 0%,#fff9df 40%,#eefaf3 100%);transition:opacity .75s var(--ease),visibility .75s var(--ease)}
+    .loader.hide{opacity:0;visibility:hidden}
+    .loader::before,.loader::after{content:"";position:absolute;width:480px;height:480px;border-radius:999px;filter:blur(10px);opacity:.38;animation:floatBlob 6s ease-in-out infinite alternate}
+    .loader::before{left:-170px;bottom:-170px;background:rgba(15,122,69,.22)}
+    .loader::after{right:-160px;top:-160px;background:rgba(255,201,56,.28);animation-delay:.8s}
+    .loader-card{position:relative;z-index:1;text-align:center;width:min(490px,calc(100% - 42px));padding:36px 30px;border-radius:38px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow-xl);backdrop-filter:blur(18px)}
+    .loader-logo{width:186px;height:186px;margin:0 auto 16px;border-radius:38px;object-fit:contain;background:#fff;padding:12px;box-shadow:0 26px 66px rgba(6,40,23,.15);animation:logoBreath 1.6s ease-in-out infinite}
+    .loader-title{font-size:1.34rem;font-weight:950;color:var(--green-900);line-height:1.1;letter-spacing:-.02em}
+    .loader-subtitle{font-size:.78rem;font-weight:950;text-transform:uppercase;letter-spacing:.18em;color:var(--gold-700);margin:8px 0 22px}
+    .loading-row{display:flex;justify-content:space-between;align-items:center;color:var(--green-900);font-size:.84rem;font-weight:900;margin-bottom:10px}
+    .loading-track{height:12px;background:rgba(11,63,37,.10);border-radius:999px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.08)}
+    .loading-fill{width:0%;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green-700),var(--gold-500));transition:width .25s ease}
+    @keyframes logoBreath{50%{transform:scale(1.055)}}
+    @keyframes floatBlob{to{transform:translate3d(38px,-28px,0) scale(1.08)}}
+
+    /* Promo Popup */
+    .promo-overlay{position:fixed;inset:0;z-index:9000;display:none;place-items:center;padding:24px;background:rgba(3,24,15,.76);backdrop-filter:blur(16px)}
+    .promo-overlay.show{display:grid;animation:fadeIn .35s ease both}
+    .promo-modal{position:relative;width:min(1060px,100%);max-height:92vh;overflow:hidden;border-radius:34px;background:#fff;box-shadow:0 44px 130px rgba(0,0,0,.45);transform-origin:center;animation:promoIn .75s var(--ease) both;border:1px solid rgba(255,255,255,.28)}
+    .promo-layout{display:grid;grid-template-columns:1.07fr .93fr;min-height:560px}
+    .promo-image{position:relative;overflow:hidden;background:var(--green-950)}
+    .promo-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.08)}
+    .promo-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.42))}
+    .promo-tag{position:absolute;left:20px;top:20px;z-index:2;display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:.78rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(10px)}
+    .promo-content{position:relative;padding:44px 40px;background:
+      radial-gradient(circle at 100% 0%,rgba(255,201,56,.28),transparent 18rem),
+      radial-gradient(circle at 0% 100%,rgba(15,122,69,.12),transparent 17rem),#fff}
+    .promo-content::before{content:"";position:absolute;right:-70px;bottom:-70px;width:180px;height:180px;border-radius:999px;background:rgba(15,122,69,.08)}
+    .promo-logo{width:86px;height:86px;object-fit:contain;border-radius:24px;background:#fff;padding:6px;box-shadow:0 18px 36px rgba(6,40,23,.12);margin-bottom:22px}
+    .promo-kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;border-radius:999px;padding:9px 13px;background:var(--green-100);color:var(--green-800);font-size:.82rem;font-weight:950;text-transform:uppercase;letter-spacing:.08em}
+    .promo-content h3{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.2rem,4vw,3.85rem);line-height:.98;letter-spacing:-.055em;margin-bottom:14px;color:var(--green-950)}
+    .promo-content p{font-size:1.04rem;color:var(--muted);line-height:1.72;max-width:430px}
+    .promo-points{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:24px 0 28px;list-style:none}
+    .promo-points li{display:flex;gap:9px;align-items:flex-start;border-radius:16px;padding:12px;background:#fff;border:1px solid var(--soft-line);font-size:.9rem;font-weight:850;color:var(--green-900);line-height:1.35;box-shadow:0 10px 24px rgba(6,40,23,.04)}
+    .promo-points i{color:var(--gold-600);margin-top:3px}
+    .promo-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+    .promo-close{position:absolute;right:16px;top:16px;z-index:3;width:46px;height:46px;border:0;border-radius:16px;background:rgba(255,255,255,.92);color:var(--green-950);box-shadow:0 16px 34px rgba(0,0,0,.14);cursor:pointer;transition:.25s}
+    .promo-close:hover{transform:rotate(90deg) scale(1.05);background:var(--gold-500)}
+    @keyframes promoIn{0%{opacity:0;transform:translateY(28px) scale(.94)}100%{opacity:1;transform:none}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+    /* Header */
+    .page-progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--green-700),var(--gold-500));z-index:5000;box-shadow:0 0 20px rgba(255,201,56,.52)}
+    .topbar{position:fixed;top:4px;left:0;right:0;z-index:2000;height:42px;overflow:hidden;color:#fff;background:linear-gradient(90deg,var(--green-980),var(--green-800),var(--gold-700))}
+    .ticker{display:flex;width:max-content;height:42px;align-items:center;white-space:nowrap;animation:marquee 34s linear infinite}
+    .ticker span{display:inline-flex;align-items:center;gap:10px;padding:0 30px;font-size:.84rem;font-weight:900;letter-spacing:.01em}
+    .ticker i{color:var(--gold-500)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    .navbar{position:fixed;top:46px;left:0;right:0;z-index:1900;padding:17px 0;transition:.35s var(--ease)}
+    .navbar.scrolled{top:0;padding:10px 0;background:rgba(255,255,255,.88);backdrop-filter:blur(22px);box-shadow:0 22px 58px rgba(6,40,23,.11)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;min-width:max-content}
+    .brand-logo{width:66px;height:66px;border-radius:20px;object-fit:contain;background:#fff;padding:5px;box-shadow:0 14px 28px rgba(6,40,23,.13)}
+    .brand strong{display:block;color:var(--green-900);font-size:1.1rem;font-weight:950;line-height:1}
+    .brand small{display:block;color:var(--gold-700);font-size:.74rem;text-transform:uppercase;font-weight:950;letter-spacing:.15em;margin-top:6px}
+    .nav-links{display:flex;align-items:center;gap:4px;padding:7px;border:1px solid rgba(255,255,255,.22);border-radius:22px;background:rgba(255,255,255,.11);backdrop-filter:blur(12px)}
+    .navbar.scrolled .nav-links{background:#fff;border-color:var(--soft-line)}
+    .nav-links a{padding:10px 14px;border-radius:14px;color:rgba(255,255,255,.92);font-size:.93rem;font-weight:880;transition:.25s}
+    .navbar.scrolled .nav-links a{color:#2f4c3c}
+    .nav-links a:hover{background:rgba(255,255,255,.16);color:#fff}
+    .navbar.scrolled .nav-links a:hover{background:var(--green-100);color:var(--green-900)}
+    .menu-btn{display:none;width:50px;height:50px;border:0;border-radius:17px;background:#fff;color:var(--green-900);box-shadow:0 14px 30px rgba(6,40,23,.14);cursor:pointer;font-size:1.18rem}
+
+    /* Hero */
+    .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:182px 0 124px;color:#fff;overflow:hidden;background:
+      linear-gradient(112deg,rgba(3,24,15,.93) 0%,rgba(3,24,15,.82) 44%,rgba(3,24,15,.30) 100%),
+      url('mge_assets/campus-aerial.webp') center/cover no-repeat}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 18%,rgba(255,201,56,.30),transparent 36rem),radial-gradient(circle at 16% 86%,rgba(18,148,86,.26),transparent 30rem)}
+    .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:190px;background:linear-gradient(transparent,var(--cream))}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+    .hero-badges{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:24px}
+    .pill{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 15px;background:rgba(255,255,255,.11);backdrop-filter:blur(12px);font-size:.86rem;font-weight:900;color:rgba(255,255,255,.94)}
+    .hero h1{color:#fff;text-shadow:0 18px 58px rgba(0,0,0,.30)}
+    .hero .lead{color:rgba(255,255,255,.86);font-size:clamp(1.12rem,1.24vw,1.28rem);margin:24px 0 32px;max-width:720px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px;max-width:750px}
+    .metric{position:relative;overflow:hidden;padding:18px;border-radius:24px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px)}
+    .metric::after{content:"";position:absolute;right:-42px;top:-42px;width:96px;height:96px;border-radius:50%;background:rgba(255,201,56,.18)}
+    .metric strong{display:block;color:var(--gold-500);font-size:1.7rem;font-weight:950;line-height:1}
+    .metric span{display:block;margin-top:8px;color:rgba(255,255,255,.79);font-size:.85rem;font-weight:770;line-height:1.38}
+    .hero-visual{position:relative;min-height:665px;perspective:1000px}
+    .hero-photo-main{position:absolute;inset:52px 36px 58px 62px;border-radius:38px;overflow:hidden;box-shadow:var(--shadow-xl);border:1px solid rgba(255,255,255,.18);transform:rotate(1.2deg)}
+    .hero-photo-main img{width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.04)}
+    .float-card{position:absolute;border-radius:26px;overflow:hidden;box-shadow:0 26px 70px rgba(0,0,0,.28);border:8px solid rgba(255,255,255,.96);background:#fff;animation:floatY 6s ease-in-out infinite}
+    .float-card img{width:100%;height:100%;object-fit:cover}
+    .float-card.one{left:0;top:0;width:275px;height:190px}
+    .float-card.two{right:0;bottom:0;width:285px;height:206px;animation-delay:.7s;animation-direction:alternate-reverse}
+    .float-logo{position:absolute;right:34px;top:18px;width:118px;height:118px;border-radius:30px;background:#fff;padding:7px;box-shadow:0 26px 56px rgba(0,0,0,.22);animation:floatY 5.5s ease-in-out infinite reverse}
+    .hero-panel{position:absolute;left:22px;right:22px;bottom:28px;padding:22px 22px 22px 70px;border-radius:26px;background:rgba(255,255,255,.93);color:var(--ink);box-shadow:0 24px 56px rgba(6,40,23,.18);backdrop-filter:blur(16px)}
+    .hero-panel i{position:absolute;left:22px;top:24px;width:36px;height:36px;display:grid;place-items:center;border-radius:13px;background:var(--green-100);color:var(--green-800)}
+    .hero-panel strong{display:block;color:var(--green-900);font-size:1.08rem;font-weight:950;line-height:1.2;margin-bottom:5px}
+    .hero-panel p{font-size:.95rem;color:var(--muted);line-height:1.6}
+    @keyframes floatY{50%{transform:translateY(-18px) rotate(-1deg)}}
+
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease), transform .9s var(--ease)}
+    .reveal.show{opacity:1;transform:none}
+    .reveal.delay-1{transition-delay:.1s}.reveal.delay-2{transition-delay:.2s}.reveal.delay-3{transition-delay:.3s}
+    .reveal.zoom{transform:translateY(26px) scale(.96)}.reveal.zoom.show{transform:none}
+
+    /* Trust */
+    .trust-strip{position:relative;z-index:3;margin-top:-70px}
+    .trust-box{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:24px;border-radius:34px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.88);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+    .trust-item{display:flex;align-items:flex-start;gap:15px;padding:14px;border-radius:24px;transition:.35s var(--ease)}
+    .trust-item:hover{background:var(--green-100);transform:translateY(-5px)}
+    .trust-icon{width:56px;height:56px;flex:0 0 auto;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green-100),#fff);color:var(--green-800);font-size:1.12rem;box-shadow:0 12px 26px rgba(6,40,23,.08)}
+    .trust-item h4{font-size:1.16rem;font-weight:950;color:var(--green-900);margin-bottom:4px;letter-spacing:-.02em}
+    .trust-item p{font-size:.91rem;color:var(--muted);line-height:1.5}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:.98fr 1.02fr;gap:62px;align-items:center}
+    .photo-collage{position:relative;min-height:640px}
+    .collage-img{position:absolute;overflow:hidden;border-radius:34px;box-shadow:0 28px 70px rgba(6,40,23,.15);border:1px solid rgba(255,255,255,.8);background:#ddd}
+    .collage-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+    .collage-img:hover img{transform:scale(1.08)}
+    .collage-img.a{left:0;top:0;width:70%;height:360px}
+    .collage-img.b{right:0;top:220px;width:56%;height:310px;border:10px solid #fff}
+    .collage-img.c{left:58px;bottom:0;width:48%;height:210px}
+    .collage-badge{position:absolute;left:20px;bottom:72px;width:210px;border-radius:28px;padding:22px;background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;box-shadow:0 26px 70px rgba(6,40,23,.25)}
+    .collage-badge strong{display:block;font-size:2.3rem;line-height:1;color:var(--gold-500);font-weight:950}
+    .collage-badge span{display:block;font-size:.9rem;font-weight:850;line-height:1.4;margin-top:9px;color:rgba(255,255,255,.84)}
+    .about-copy .lead{margin-top:18px}
+    .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:30px 0}
+    .check{display:flex;gap:12px;align-items:flex-start;padding:17px;border:1px solid var(--soft-line);border-radius:22px;background:#fff;box-shadow:0 14px 32px rgba(6,40,23,.05);transition:.35s var(--ease)}
+    .check:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .check i{color:var(--gold-700);margin-top:4px}
+    .check strong{display:block;color:var(--green-900);font-weight:950;font-size:.98rem;margin-bottom:3px}
+    .check span{display:block;color:var(--muted);font-size:.91rem;line-height:1.52}
+
+    /* Batch Section */
+    .batch-section{color:#fff;background:
+      linear-gradient(115deg,rgba(3,24,15,.93),rgba(3,24,15,.77)),
+      url('mge_assets/batch-banner.png') center/cover no-repeat;background-attachment:fixed}
+    .batch-section h2,.batch-section h3{color:#fff}
+    .batch-section .lead{color:rgba(255,255,255,.80)}
+    .batch-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center;position:relative;z-index:1}
+    .batch-poster{border-radius:36px;overflow:hidden;box-shadow:0 36px 110px rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.18);background:var(--green-950)}
+    .batch-poster img{width:100%;height:100%;object-fit:cover}
+    .batch-card{border:1px solid rgba(255,255,255,.14);border-radius:36px;background:rgba(255,255,255,.10);padding:38px;backdrop-filter:blur(16px);box-shadow:0 30px 90px rgba(0,0,0,.22)}
+    .batch-card .eyebrow{background:rgba(255,255,255,.10);color:#fff;border-color:rgba(255,255,255,.16)}
+    .batch-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:28px 0 32px;list-style:none}
+    .batch-list li{display:flex;align-items:flex-start;gap:11px;padding:15px;border-radius:20px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.13);font-size:.96rem;font-weight:850;color:rgba(255,255,255,.86);line-height:1.45}
+    .batch-list i{color:var(--gold-500);margin-top:4px}
+
+    /* Programs */
+    .programs{background:#fff}
+    .programs::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),url('mge_assets/class-intensive-01.webp') center/cover no-repeat;opacity:.82}
+    .programs .container{position:relative;z-index:1}
+    .program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
+    .program-card{position:relative;overflow:hidden;min-height:370px;border-radius:32px;padding:26px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.92);box-shadow:0 18px 50px rgba(6,40,23,.08);backdrop-filter:blur(14px);transition:.4s var(--ease)}
+    .program-card:hover{transform:translateY(-12px);box-shadow:0 30px 90px rgba(6,40,23,.16)}
+    .program-card::before{content:"";position:absolute;right:-60px;top:-60px;width:160px;height:160px;border-radius:999px;background:rgba(255,201,56,.22);transition:.45s var(--ease)}
+    .program-card:hover::before{transform:scale(1.25)}
+    .program-icon{position:relative;z-index:1;width:66px;height:66px;display:grid;place-items:center;border-radius:22px;background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;font-size:1.35rem;box-shadow:0 17px 36px rgba(15,103,57,.24);margin-bottom:24px}
+    .program-card h3{position:relative;z-index:1;font-weight:950;color:var(--green-900);margin-bottom:12px}
+    .program-card p{position:relative;z-index:1;font-size:.98rem;color:var(--muted);line-height:1.64;margin-bottom:20px}
+    .program-list{position:relative;z-index:1;display:grid;gap:10px;list-style:none}
+    .program-list li{display:flex;gap:10px;color:#365044;font-size:.92rem;font-weight:760;line-height:1.45}
+    .program-list i{color:var(--gold-700);margin-top:5px}
+
+    /* Experience */
+    .experience{color:#fff;background:
+      linear-gradient(rgba(3,24,15,.88),rgba(3,24,15,.82)),
+      url('mge_assets/class-group-fun.webp') center/cover fixed no-repeat}
+    .experience .eyebrow{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.15);color:#fff}
+    .experience h2{color:#fff}.experience .lead{color:rgba(255,255,255,.79)}
+    .experience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .exp-card{position:relative;min-height:310px;overflow:hidden;border-radius:30px;padding:26px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(14px);transition:.38s var(--ease)}
+    .exp-card:hover{transform:translateY(-10px);background:rgba(255,255,255,.15)}
+    .exp-card i{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;background:rgba(255,201,56,.18);color:var(--gold-500);font-size:1.22rem;margin-bottom:20px}
+    .exp-card h3{color:#fff;font-size:1.22rem;font-weight:950;margin-bottom:11px}
+    .exp-card p{color:rgba(255,255,255,.76);font-size:.94rem;line-height:1.65}
+
+    /* Process */
+    .process{background:linear-gradient(180deg,#fff,var(--cream))}
+    .process-grid{display:grid;grid-template-columns:1fr .98fr;gap:58px;align-items:center}
+    .steps{display:grid;gap:16px;margin-top:28px}
+    .step{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:21px;border:1px solid var(--soft-line);border-radius:26px;background:#fff;box-shadow:0 16px 40px rgba(6,40,23,.06);transition:.35s var(--ease)}
+    .step:hover{transform:translateX(8px);box-shadow:var(--shadow)}
+    .step-no{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;font-weight:950}
+    .step h4{font-size:1.1rem;font-weight:950;color:var(--green-900);margin-bottom:6px}
+    .step p{font-size:.96rem;color:var(--muted);line-height:1.58}
+    .process-media{position:relative;min-height:660px;border-radius:38px;overflow:hidden;box-shadow:var(--shadow-xl);background:#ddd}
+    .process-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .process-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(3,24,15,.62))}
+    .process-badge{position:absolute;left:22px;right:22px;bottom:22px;z-index:2;padding:22px 24px;border-radius:26px;background:rgba(255,255,255,.92);box-shadow:0 22px 52px rgba(6,40,23,.18);backdrop-filter:blur(14px)}
+    .process-badge strong{display:block;color:var(--green-900);font-size:1.08rem;font-weight:950;margin-bottom:5px}
+    .process-badge p{color:var(--muted);font-size:.94rem;line-height:1.58}
+
+    /* Gallery */
+    .gallery{background:#fff}
+    .gallery::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,rgba(255,201,56,.14),transparent 25rem),radial-gradient(circle at 90% 12%,rgba(18,148,86,.10),transparent 26rem)}
+    .gallery .container{position:relative;z-index:1}
+    .gallery-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin:-28px 0 36px}
+    .filter-btn{border:1px solid var(--soft-line);background:#fff;color:var(--green-900);padding:11px 17px;border-radius:999px;font-size:.9rem;font-weight:950;cursor:pointer;transition:.28s var(--ease);box-shadow:0 10px 22px rgba(6,40,23,.04)}
+    .filter-btn.active,.filter-btn:hover{background:var(--green-900);color:#fff;box-shadow:0 14px 32px rgba(6,40,23,.18)}
+    .gallery-grid{display:grid;grid-template-columns:1.1fr .85fr 1.05fr;grid-auto-rows:246px;gap:17px}
+    .gallery-item{position:relative;overflow:hidden;border:0;border-radius:30px;background:#ddd;cursor:pointer;box-shadow:0 18px 42px rgba(6,40,23,.09);transition:.45s var(--ease)}
+    .gallery-item:nth-child(1){grid-row:span 2}.gallery-item:nth-child(4){grid-column:span 2}.gallery-item:nth-child(6){grid-row:span 2}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .75s var(--ease),filter .75s var(--ease)}
+    .gallery-item::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(3,24,15,.78));opacity:.84;z-index:1;transition:.35s}
+    .gallery-item:hover{transform:translateY(-5px)}
+    .gallery-item:hover img{transform:scale(1.09);filter:saturate(1.12)}
+    .gallery-caption{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff;text-align:left}
+    .gallery-caption strong{display:block;font-size:1.1rem;font-weight:950;margin-bottom:5px;line-height:1.15}
+    .gallery-caption span{display:block;font-size:.8rem;font-weight:850;color:rgba(255,255,255,.74);text-transform:uppercase;letter-spacing:.1em}
+    .photo-marquee{margin-top:52px;display:flex;gap:17px;width:max-content;animation:photoMarquee 42s linear infinite}
+    .photo-marquee img{width:280px;height:184px;object-fit:cover;border-radius:26px;box-shadow:0 16px 38px rgba(6,40,23,.09)}
+    @keyframes photoMarquee{to{transform:translateX(-50%)}}
+
+    .modal{position:fixed;inset:0;z-index:8000;display:none;place-items:center;padding:22px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}
+    .modal.open{display:grid;animation:fadeIn .25s ease both}.modal-card{position:relative;width:min(1080px,100%);max-height:90vh;border-radius:32px;overflow:hidden;background:#fff;box-shadow:0 34px 100px rgba(0,0,0,.38);animation:promoIn .42s var(--ease) both}
+    .modal-img{width:100%;height:min(72vh,720px);object-fit:cover}.modal-info{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 24px;background:#fff}.modal-info strong{color:var(--green-900);font-weight:950}.modal-info span{color:var(--muted);font-size:.9rem}
+    .modal-close{position:absolute;right:14px;top:14px;width:46px;height:46px;display:grid;place-items:center;border:0;border-radius:16px;background:#fff;color:var(--green-900);cursor:pointer;box-shadow:0 12px 32px rgba(0,0,0,.18)}
+
+    /* Testimonials */
+    .testimonials{background:
+      linear-gradient(rgba(251,250,244,.94),rgba(255,255,255,.96)),
+      url('mge_assets/campus-landscape.webp') center/cover fixed no-repeat}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .testi-card{position:relative;border:1px solid rgba(255,255,255,.84);border-radius:30px;background:rgba(255,255,255,.84);padding:30px;box-shadow:0 18px 48px rgba(6,40,23,.08);backdrop-filter:blur(14px)}
+    .quote-mark{position:absolute;right:26px;top:18px;font-family:"Playfair Display";font-size:4.4rem;line-height:1;color:rgba(240,178,10,.20)}
+    .stars{color:var(--gold-600);letter-spacing:2px;margin-bottom:16px}
+    .testi-card p{color:var(--muted);font-size:.98rem;line-height:1.72;margin-bottom:22px}
+    .testi-user{display:flex;align-items:center;gap:13px}.avatar{width:50px;height:50px;border-radius:17px;display:grid;place-items:center;background:var(--green-100);color:var(--green-800);font-weight:950}.testi-user strong{display:block;color:var(--green-900);font-weight:950;line-height:1.2}.testi-user span{font-size:.82rem;color:var(--muted);font-weight:800}
+
+    /* FAQ */
+    .faq-wrap{max-width:940px;margin:0 auto}.faq-item{border:1px solid var(--soft-line);border-radius:24px;background:#fff;box-shadow:0 12px 30px rgba(6,40,23,.045);overflow:hidden;margin-bottom:15px}.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;border:0;background:#fff;padding:22px 24px;color:var(--green-900);font-weight:950;text-align:left;cursor:pointer;font-size:1.04rem}.faq-q i{width:36px;height:36px;border-radius:13px;display:grid;place-items:center;background:var(--green-100);transition:.3s}.faq-item.open .faq-q i{transform:rotate(180deg);background:var(--green-900);color:#fff}.faq-a{max-height:0;overflow:hidden;transition:max-height .42s var(--ease)}.faq-a div{padding:0 24px 22px;color:var(--muted);font-size:.98rem}
+
+    /* CTA & Footer */
+    .cta{color:#fff;background:
+      linear-gradient(118deg,rgba(3,24,15,.94),rgba(3,24,15,.76)),
+      url('mge_assets/campus-masterplan.webp') center/cover no-repeat}
+    .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 10%,rgba(255,201,56,.30),transparent 27rem)}
+    .cta-box{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:34px;align-items:center}
+    .cta h2{color:#fff}.cta .lead{color:rgba(255,255,255,.80);margin:18px 0 28px}
+    .contact-card{border:1px solid rgba(255,255,255,.16);border-radius:32px;background:rgba(255,255,255,.12);backdrop-filter:blur(16px);padding:30px;box-shadow:0 30px 90px rgba(0,0,0,.20)}
+    .contact-list{display:grid;gap:16px;list-style:none}.contact-list li{display:flex;align-items:flex-start;gap:14px;color:rgba(255,255,255,.84);font-size:1rem}.contact-list i{width:42px;height:42px;border-radius:15px;display:grid;place-items:center;background:rgba(255,201,56,.18);color:var(--gold-500);flex:0 0 auto}.contact-list strong{color:#fff}
+    footer{background:var(--green-980);color:#fff;padding:74px 0 30px}.footer-grid{display:grid;grid-template-columns:1.2fr .75fr .8fr 1fr;gap:30px;margin-bottom:36px}.footer-brand{display:flex;gap:15px}.footer-brand img{width:70px;height:70px;object-fit:contain;border-radius:19px;background:#fff;padding:5px}.footer-brand strong{display:block;font-size:1.12rem;font-weight:950;margin-bottom:7px}.footer-brand p,.footer-links a,.footer-links li{color:rgba(255,255,255,.68);font-size:.94rem;line-height:1.65}.footer-title{font-size:1rem;font-weight:950;margin-bottom:15px}.footer-links{display:grid;gap:10px;list-style:none}.footer-links a:hover{color:#fff}.socials{display:flex;gap:10px;margin-top:15px}.socials a{width:44px;height:44px;border:1px solid rgba(255,255,255,.10);border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.08);transition:.3s}.socials a:hover{background:var(--gold-600);color:var(--green-980);transform:translateY(-3px)}.footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.55);font-size:.88rem}
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:1700;display:inline-flex;align-items:center;gap:10px;padding:15px 19px;border-radius:999px;background:#25D366;color:#fff;font-weight:950;box-shadow:0 20px 42px rgba(37,211,102,.34);transition:.35s var(--ease)}.wa-float:hover{transform:translateY(-5px)}
+
+    @media (max-width:1160px){
+      .hero-grid,.about-grid,.batch-wrap,.process-grid,.cta-box{grid-template-columns:1fr}
+      .hero-visual{min-height:590px}.program-grid,.trust-box,.experience-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-item:nth-child(n){grid-row:auto;grid-column:auto}.gallery-item:nth-child(1),.gallery-item:nth-child(6){grid-row:span 2}.testi-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:880px){
+      html{font-size:16px}.topbar{display:none}.navbar{top:0}.nav-links,.nav-cta{display:none}.menu-btn{display:grid;place-items:center}.navbar.open .nav-links{display:flex;position:absolute;left:22px;right:22px;top:86px;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--soft-line);box-shadow:var(--shadow);border-radius:24px;padding:14px}.navbar.open .nav-links a{color:#34513f;padding:13px 14px}.hero{padding-top:132px}.hero-metrics,.program-grid,.trust-box,.check-grid,.experience-grid,.testi-grid,.footer-grid,.batch-list,.promo-points{grid-template-columns:1fr}.hero-visual{min-height:auto}.hero-photo-main,.float-card.one,.float-card.two,.float-logo{position:relative;inset:auto;right:auto;left:auto;top:auto;bottom:auto;width:100%;height:auto;transform:none;margin:14px 0;border-radius:28px}.hero-photo-main img,.float-card img{height:315px}.float-logo{width:112px;height:112px;margin:0 0 14px auto}.hero-panel{position:relative;left:auto;right:auto;bottom:auto;margin-top:14px}.photo-collage{min-height:auto;display:grid;gap:14px}.collage-img,.collage-img.a,.collage-img.b,.collage-img.c{position:relative;inset:auto;width:100%;height:280px;border-radius:28px}.collage-badge{position:relative;left:auto;bottom:auto;width:100%;margin-top:0}.process-media{min-height:450px}.gallery-grid{grid-template-columns:1fr}.gallery-item,.gallery-item:nth-child(1),.gallery-item:nth-child(6){height:280px;grid-row:auto}.promo-layout{grid-template-columns:1fr}.promo-image{height:290px}.promo-modal{max-height:94vh;overflow:auto}.modal-img{height:58vh}
+    }
+    @media (max-width:560px){
+      .container{width:min(100% - 24px,1220px)}.section{padding:88px 0}.loader-logo{width:152px;height:152px}.hero h1{font-size:clamp(3rem,15vw,4.25rem)}.hero-actions .btn,.cta .btn,.promo-actions .btn{width:100%}.brand-logo{width:56px;height:56px}.brand strong{font-size:.98rem}.brand small{font-size:.66rem}.promo-content{padding:30px 22px}.promo-image{height:238px}.batch-card{padding:28px 22px}.gallery-caption strong{font-size:1rem}.photo-marquee img{width:224px;height:150px}.wa-float span{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading website">
+    <div class="loader-card">
+      <img class="loader-logo" src="mge_assets/logo-mercy-global-english.png" alt="Mercy Global English Logo">
+      <div class="loader-title">Mercy Global English</div>
+      <div class="loader-subtitle">IELTS Preparation • English Course</div>
+      <div class="loading-row"><span>Preparing premium experience</span><span id="loadingPercent">0%</span></div>
+      <div class="loading-track"><div class="loading-fill" id="loadingFill"></div></div>
+    </div>
+  </div>
+
+  <div class="promo-overlay" id="promoPopup" aria-hidden="true">
+    <div class="promo-modal" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+      <button class="promo-close" id="promoClose" aria-label="Tutup popup"><i class="fa-solid fa-xmark"></i></button>
+      <div class="promo-layout">
+        <div class="promo-image">
+          <img src="mge_assets/batch-banner.png" alt="Batch 4 IELTS MILBOS by CHEZ EGI International">
+          <span class="promo-tag"><i class="fa-solid fa-bolt"></i> Batch 4 Open</span>
+        </div>
+        <div class="promo-content">
+          <img class="promo-logo" src="mge_assets/logo-mercy-global-english.png" alt="Mercy Global English Logo">
+          <div class="promo-kicker"><i class="fa-solid fa-star"></i> Featured Program</div>
+          <h3 id="promoTitle">IELTS Batch 4 is Ready.</h3>
+          <p>Gabung program persiapan IELTS dengan suasana belajar yang terarah, disiplin, interaktif, dan didampingi tutor berpengalaman.</p>
+          <ul class="promo-points">
+            <li><i class="fa-solid fa-check"></i> Academic & General Training</li>
+            <li><i class="fa-solid fa-check"></i> Practice berbasis target</li>
+            <li><i class="fa-solid fa-check"></i> Evaluasi progress belajar</li>
+            <li><i class="fa-solid fa-check"></i> Kelas lebih fokus dan rapi</li>
+          </ul>
+          <div class="promo-actions">
+            <a class="btn btn-primary" href="https://wa.me/62895611328080?text=Halo%20Mercy%20Global%20English,%20saya%20ingin%20konsultasi%20IELTS%20Batch%204." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Konsultasi Batch 4</a>
+            <button class="btn btn-outline" id="promoExplore"><i class="fa-solid fa-arrow-down"></i> Lihat Website</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-progress" id="pageProgress"></div>
+
+  <div class="topbar">
+    <div class="ticker">
+      <span><i class="fa-solid fa-star"></i> IELTS Preparation Batch 4</span>
+      <span><i class="fa-solid fa-circle-check"></i> Placement test & progress tracking</span>
+      <span><i class="fa-solid fa-book-open-reader"></i> Speaking, grammar, vocabulary, listening, writing</span>
+      <span><i class="fa-solid fa-seedling"></i> Learning atmosphere: professional, positive, and disciplined</span>
+      <span><i class="fa-solid fa-star"></i> IELTS Preparation Batch 4</span>
+      <span><i class="fa-solid fa-circle-check"></i> Placement test & progress tracking</span>
+      <span><i class="fa-solid fa-book-open-reader"></i> Speaking, grammar, vocabulary, listening, writing</span>
+      <span><i class="fa-solid fa-seedling"></i> Learning atmosphere: professional, positive, and disciplined</span>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Mercy Global English Home">
+        <img class="brand-logo" src="mge_assets/logo-mercy-global-english.png" alt="Mercy Global English Logo">
+        <span><strong>Mercy Global English</strong><small>Learn • Speak • Grow</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#batch">Batch 4</a>
+        <a href="#programs">Program</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/62895611328080?text=Halo%20Mercy%20Global%20English,%20saya%20ingin%20konsultasi%20program." target="_blank" rel="noopener">Konsultasi</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="texture"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-badges">
+            <span class="pill"><i class="fa-solid fa-award"></i> IELTS Preparation</span>
+            <span class="pill"><i class="fa-solid fa-users"></i> Intensive Class</span>
+            <span class="pill"><i class="fa-solid fa-video"></i> Online & Offline Support</span>
+          </div>
+          <h1>English learning that feels <span class="accent">focused</span>, premium, and measurable.</h1>
+          <p class="lead">Mercy Global English menghadirkan pengalaman belajar bahasa Inggris dan IELTS Preparation dengan pendekatan yang rapi, visual, interaktif, dan berbasis progress.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/62895611328080?text=Halo%20Mercy%20Global%20English,%20saya%20ingin%20konsultasi%20program." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Konsultasi Sekarang</a>
+            <a class="btn btn-light" href="#batch"><i class="fa-solid fa-bolt"></i> Lihat Batch 4</a>
+          </div>
+          <div class="hero-metrics" aria-label="Program statistics">
+            <div class="metric"><strong data-count="4">0</strong><span>Skill focus</span></div>
+            <div class="metric"><strong data-count="60">0</strong><span>Hours learning support</span></div>
+            <div class="metric"><strong data-count="100">0</strong><span>% guided progress</span></div>
+            <div class="metric"><strong data-count="1">0</strong><span>Clear learning path</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal delay-2" aria-label="Visual kelas Mercy Global English">
+          <div class="hero-photo-main"><img src="mge_assets/class-intensive-04.webp" alt="Siswa belajar bahasa Inggris di kelas"></div>
+          <div class="float-card one"><img src="mge_assets/group-outdoor-batch.webp" alt="Dokumentasi batch IELTS"></div>
+          <div class="float-card two"><img src="mge_assets/class-writing-close.webp" alt="Aktivitas menulis siswa"></div>
+          <img class="float-logo" src="mge_assets/logo-mercy-global-english.png" alt="Mercy Global English Logo">
+          <div class="hero-panel"><i class="fa-solid fa-graduation-cap"></i><strong>Structured, elegant, and student-centered.</strong><p>Setiap sesi dibuat agar siswa bukan hanya memahami teori, tetapi mampu memakai bahasa Inggris dengan percaya diri.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-box reveal zoom">
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-route"></i></div><div><h4>Clear Path</h4><p>Belajar dimulai dari level dan target yang jelas.</p></div></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-comments"></i></div><div><h4>Active Practice</h4><p>Speaking, listening, writing, dan vocabulary dipraktikkan bertahap.</p></div></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-chart-simple"></i></div><div><h4>Progress Review</h4><p>Perkembangan siswa dipantau melalui latihan dan evaluasi.</p></div></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-leaf"></i></div><div><h4>Positive Vibe</h4><p>Lingkungan belajar sopan, disiplin, dan produktif.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="photo-collage reveal">
+          <div class="collage-img a"><img src="mge_assets/campus-aerial.webp" alt="Lingkungan kampus hijau"></div>
+          <div class="collage-img b"><img src="mge_assets/class-intensive-02.webp" alt="Aktivitas kelas bahasa Inggris"></div>
+          <div class="collage-img c"><img src="mge_assets/campus-asrama.webp" alt="Lingkungan asrama"></div>
+          <div class="collage-badge"><strong>IELTS</strong><span>Preparation with a focused learning atmosphere.</span></div>
+        </div>
+        <div class="about-copy reveal delay-1">
+          <span class="eyebrow"><i class="fa-solid fa-circle-info"></i> About Mercy Global English</span>
+          <h2>Designed for students who need direction, discipline, and confidence.</h2>
+          <p class="lead">Program ini dibuat untuk membantu siswa membangun kemampuan bahasa Inggris secara bertahap melalui materi yang terstruktur, latihan aktif, feedback, dan suasana kelas yang mendukung.</p>
+          <div class="check-grid">
+            <div class="check"><i class="fa-solid fa-check-circle"></i><div><strong>Premium learning look</strong><span>Visual program dibuat lebih profesional dan meyakinkan.</span></div></div>
+            <div class="check"><i class="fa-solid fa-check-circle"></i><div><strong>Real documentation</strong><span>Foto kelas dan kegiatan memperkuat kepercayaan pengunjung.</span></div></div>
+            <div class="check"><i class="fa-solid fa-check-circle"></i><div><strong>IELTS-focused section</strong><span>Batch 4 ditonjolkan dengan tampilan yang lebih kuat.</span></div></div>
+            <div class="check"><i class="fa-solid fa-check-circle"></i><div><strong>Professional interaction</strong><span>Animasi halus, popup promosi, dan galeri interaktif.</span></div></div>
+          </div>
+          <a class="btn btn-primary" href="#programs">Explore Programs <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section batch-section" id="batch">
+      <div class="texture"></div>
+      <div class="container batch-wrap">
+        <div class="batch-poster reveal zoom">
+          <img src="mge_assets/batch-banner.png" alt="Batch 4 IELTS MILBOS banner">
+        </div>
+        <div class="batch-card reveal delay-1">
+          <span class="eyebrow"><i class="fa-solid fa-bolt"></i> Batch 4 IELTS MILBOS</span>
+          <h2>Preparation program with a stronger academic atmosphere.</h2>
+          <p class="lead">Batch 4 dibuat sebagai highlight utama agar pengunjung langsung menangkap pesan program: serius, terarah, dan siap membantu siswa mempersiapkan IELTS dengan lebih percaya diri.</p>
+          <ul class="batch-list">
+            <li><i class="fa-solid fa-check"></i> IELTS Academic & General Training</li>
+            <li><i class="fa-solid fa-check"></i> Speaking, listening, reading, writing</li>
+            <li><i class="fa-solid fa-check"></i> Guided practice and feedback</li>
+            <li><i class="fa-solid fa-check"></i> Interactive learning environment</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/62895611328080?text=Halo%20Mercy%20Global%20English,%20saya%20ingin%20konsultasi%20IELTS%20Batch%204." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Konsultasi Batch 4</a>
+            <a class="btn btn-light" href="#gallery"><i class="fa-solid fa-images"></i> Lihat Dokumentasi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programs" id="programs">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-book-open"></i> Learning Programs</span>
+          <h2>Program dibuat spesifik, rapi, dan mudah dipahami calon siswa.</h2>
+          <p class="lead">Setiap program menonjolkan manfaat, bukan sekadar daftar materi. Ini membuat halaman terasa lebih profesional dan lebih siap untuk kebutuhan promosi.</p>
+        </div>
+        <div class="program-grid">
+          <article class="program-card reveal"><span class="shine"></span><div class="program-icon"><i class="fa-solid fa-comments"></i></div><h3>Speaking & Confidence</h3><p>Melatih keberanian berbicara, respon spontan, pronunciation, dan ekspresi sehari-hari.</p><ul class="program-list"><li><i class="fa-solid fa-check"></i> Conversation drilling</li><li><i class="fa-solid fa-check"></i> Roleplay and pair practice</li><li><i class="fa-solid fa-check"></i> Confidence building</li></ul></article>
+          <article class="program-card reveal delay-1"><span class="shine"></span><div class="program-icon"><i class="fa-solid fa-pen-nib"></i></div><h3>Grammar & Writing</h3><p>Membangun kalimat yang rapi untuk speaking, writing, tugas sekolah, dan kebutuhan akademik.</p><ul class="program-list"><li><i class="fa-solid fa-check"></i> Sentence building</li><li><i class="fa-solid fa-check"></i> Paragraph writing</li><li><i class="fa-solid fa-check"></i> Error correction</li></ul></article>
+          <article class="program-card reveal delay-2"><span class="shine"></span><div class="program-icon"><i class="fa-solid fa-headphones"></i></div><h3>Listening & Vocabulary</h3><p>Memperkuat pemahaman audio, kosakata penting, dan ekspresi yang sering dipakai.</p><ul class="program-list"><li><i class="fa-solid fa-check"></i> Audio practice</li><li><i class="fa-solid fa-check"></i> Vocabulary booster</li><li><i class="fa-solid fa-check"></i> Quiz and review</li></ul></article>
+          <article class="program-card reveal delay-3"><span class="shine"></span><div class="program-icon"><i class="fa-solid fa-award"></i></div><h3>IELTS & Test Prep</h3><p>Persiapan tes dengan strategi, latihan terukur, dan feedback untuk peningkatan skill.</p><ul class="program-list"><li><i class="fa-solid fa-check"></i> Strategy practice</li><li><i class="fa-solid fa-check"></i> Timed exercise</li><li><i class="fa-solid fa-check"></i> Targeted feedback</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience">
+      <div class="texture"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> Learning Experience</span>
+          <h2>Lebih visual, lebih hidup, dan lebih terasa seperti lembaga profesional.</h2>
+          <p class="lead">Beberapa bagian memakai background foto asli agar website tidak polos dan terasa punya karakter kuat sesuai identitas Mercy Global English.</p>
+        </div>
+        <div class="experience-grid">
+          <div class="exp-card reveal"><i class="fa-solid fa-chalkboard-user"></i><h3>Interactive Class</h3><p>Siswa aktif menjawab, berdiskusi, mencoba, dan mendapat arahan selama proses pembelajaran.</p></div>
+          <div class="exp-card reveal delay-1"><i class="fa-solid fa-chart-line"></i><h3>Measurable Progress</h3><p>Progress dilihat melalui latihan, tugas, speaking performance, dan evaluasi berkala.</p></div>
+          <div class="exp-card reveal delay-2"><i class="fa-solid fa-user-graduate"></i><h3>Student-Centered</h3><p>Materi diarahkan pada level, kebutuhan, dan tujuan siswa agar hasilnya lebih relevan.</p></div>
+          <div class="exp-card reveal delay-3"><i class="fa-solid fa-mosque"></i><h3>Positive Islamic Vibe</h3><p>Suasana belajar dijaga tetap sopan, disiplin, dan mendukung pembentukan karakter.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container process-grid">
+        <div class="process-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-route"></i> Learning Flow</span>
+          <h2>Alur belajar dibuat singkat, jelas, dan mudah dipercaya.</h2>
+          <p class="lead">Calon siswa diarahkan dari konsultasi, penentuan level, pembelajaran aktif, hingga evaluasi progress. Alur ini membuat program terasa lebih serius dan terorganisir.</p>
+          <div class="steps">
+            <div class="step"><div class="step-no">01</div><div><h4>Consultation</h4><p>Diskusi kebutuhan: IELTS, speaking, grammar, sekolah, interview, atau target khusus.</p></div></div>
+            <div class="step"><div class="step-no">02</div><div><h4>Level Mapping</h4><p>Siswa diarahkan sesuai kemampuan awal agar materi lebih pas dan tidak asal mulai.</p></div></div>
+            <div class="step"><div class="step-no">03</div><div><h4>Guided Learning</h4><p>Setiap pertemuan memiliki tujuan, latihan, dan feedback yang mudah diikuti.</p></div></div>
+            <div class="step"><div class="step-no">04</div><div><h4>Progress Review</h4><p>Perkembangan dilihat dari praktik, tugas, vocabulary, dan kemampuan memahami materi.</p></div></div>
+          </div>
+        </div>
+        <div class="process-media reveal delay-2">
+          <img src="mge_assets/class-intensive-03.webp" alt="Proses belajar siswa di kelas">
+          <div class="process-badge"><strong>Learning by doing.</strong><p>Visual kelas dipakai untuk memperkuat bukti aktivitas belajar dan membuat halaman terasa nyata.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-camera-retro"></i> Professional Gallery</span>
+          <h2>Dokumentasi kelas, kegiatan, dan lingkungan belajar.</h2>
+          <p class="lead">Galeri dibuat seperti portfolio kegiatan: ada filter, hover animation, lightbox, dan running visual agar halaman terasa dinamis.</p>
+        </div>
+        <div class="gallery-filters reveal" role="tablist">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="class">Kelas</button>
+          <button class="filter-btn" data-filter="campus">Lingkungan</button>
+          <button class="filter-btn" data-filter="batch">Batch</button>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" data-cat="campus" data-title="Campus Learning Environment" data-src="mge_assets/campus-aerial.webp"><img src="mge_assets/campus-aerial.webp" alt="Lingkungan kampus"><span class="gallery-caption"><strong>Campus Learning Environment</strong><span>Campus View</span></span></button>
+          <button class="gallery-item reveal delay-1" data-cat="class" data-title="Writing Practice" data-src="mge_assets/class-writing-close.webp"><img src="mge_assets/class-writing-close.webp" alt="Writing practice"><span class="gallery-caption"><strong>Writing Practice</strong><span>Class Activity</span></span></button>
+          <button class="gallery-item reveal delay-2" data-cat="batch" data-title="Batch Documentation" data-src="mge_assets/group-outdoor-batch.webp"><img src="mge_assets/group-outdoor-batch.webp" alt="Batch documentation"><span class="gallery-caption"><strong>Batch Documentation</strong><span>IELTS Program</span></span></button>
+          <button class="gallery-item reveal" data-cat="class" data-title="Focused Classroom" data-src="mge_assets/class-intensive-01.webp"><img src="mge_assets/class-intensive-01.webp" alt="Focused classroom"><span class="gallery-caption"><strong>Focused Classroom</strong><span>Intensive Session</span></span></button>
+          <button class="gallery-item reveal delay-1" data-cat="class" data-title="Student Worksheet" data-src="mge_assets/class-intensive-02.webp"><img src="mge_assets/class-intensive-02.webp" alt="Student worksheet"><span class="gallery-caption"><strong>Student Worksheet</strong><span>Practice Session</span></span></button>
+          <button class="gallery-item reveal delay-2" data-cat="campus" data-title="Campus Masterplan" data-src="mge_assets/campus-masterplan.webp"><img src="mge_assets/campus-masterplan.webp" alt="Campus masterplan"><span class="gallery-caption"><strong>Campus Masterplan</strong><span>Learning Area</span></span></button>
+          <button class="gallery-item reveal" data-cat="class" data-title="Learning Atmosphere" data-src="mge_assets/class-intensive-04.webp"><img src="mge_assets/class-intensive-04.webp" alt="Learning atmosphere"><span class="gallery-caption"><strong>Learning Atmosphere</strong><span>Classroom</span></span></button>
+          <button class="gallery-item reveal delay-1" data-cat="batch" data-title="Class Group Activity" data-src="mge_assets/class-group-fun.webp"><img src="mge_assets/class-group-fun.webp" alt="Class group activity"><span class="gallery-caption"><strong>Class Group Activity</strong><span>Fun Session</span></span></button>
+        </div>
+      </div>
+      <div class="photo-marquee" aria-hidden="true">
+        <img src="mge_assets/class-intensive-01.webp" alt=""><img src="mge_assets/group-outdoor-batch.webp" alt=""><img src="mge_assets/class-writing-close.webp" alt=""><img src="mge_assets/campus-masterplan.webp" alt=""><img src="mge_assets/class-intensive-04.webp" alt=""><img src="mge_assets/class-group-fun.webp" alt="">
+        <img src="mge_assets/class-intensive-01.webp" alt=""><img src="mge_assets/group-outdoor-batch.webp" alt=""><img src="mge_assets/class-writing-close.webp" alt=""><img src="mge_assets/campus-masterplan.webp" alt=""><img src="mge_assets/class-intensive-04.webp" alt=""><img src="mge_assets/class-group-fun.webp" alt="">
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-heart"></i> Learning Value</span>
+          <h2>Value program dibuat lebih jelas agar pengunjung langsung paham.</h2>
+          <p class="lead">Teks ini bisa diganti dengan testimoni asli nanti. Struktur tampilannya sudah dibuat profesional dan siap pakai.</p>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card reveal"><span class="quote-mark">“</span><div class="stars">★★★★★</div><p>Materi mudah diikuti karena dijelaskan bertahap. Latihan speaking dan writing membantu siswa lebih percaya diri.</p><div class="testi-user"><div class="avatar">S</div><div><strong>Student Feedback</strong><span>Speaking Program</span></div></div></div>
+          <div class="testi-card reveal delay-1"><span class="quote-mark">“</span><div class="stars">★★★★★</div><p>Kelas terasa serius, tetapi tetap nyaman. Siswa mendapat arahan yang jelas dan latihan yang relevan.</p><div class="testi-user"><div class="avatar">T</div><div><strong>Teacher Note</strong><span>Class Observation</span></div></div></div>
+          <div class="testi-card reveal delay-2"><span class="quote-mark">“</span><div class="stars">★★★★★</div><p>Program ini cocok untuk membangun grammar, vocabulary, dan keberanian berbicara secara perlahan.</p><div class="testi-user"><div class="avatar">P</div><div><strong>Parent View</strong><span>Learning Progress</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+          <h2>Pertanyaan yang sering ditanyakan.</h2>
+        </div>
+        <div class="faq-wrap reveal">
+          <div class="faq-item"><button class="faq-q">Apakah popup Batch 4 muncul saat website dibuka?<i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div>Ya. Popup Batch 4 akan tampil setiap kali halaman dibuka atau di-refresh, lalu bisa ditutup oleh pengunjung.</div></div></div>
+          <div class="faq-item"><button class="faq-q">Apakah background foto sudah dipakai di beberapa bagian?<i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div>Ya. Foto digunakan pada hero, Batch 4, program, experience, testimonial, CTA, dan galeri agar halaman tidak polos.</div></div></div>
+          <div class="faq-item"><button class="faq-q">Apakah ukuran teks sudah dibuat lebih besar?<i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div>Ya. Ukuran headline, lead text, card title, dan CTA diperbesar secara proporsional agar lebih readable dan premium.</div></div></div>
+          <div class="faq-item"><button class="faq-q">Apakah bisa langsung di-upload ke GitHub Pages?<i class="fa-solid fa-chevron-down"></i></button><div class="faq-a"><div>Bisa. Upload file <strong>index.html</strong> dan folder <strong>mge_assets</strong> dalam satu folder repository yang sama.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="contact">
+      <div class="container cta-box">
+        <div class="reveal">
+          <span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Start Consultation</span>
+          <h2>Ready to build stronger English confidence?</h2>
+          <p class="lead">Hubungi admin untuk konsultasi program, jadwal kelas, penentuan level, dan rekomendasi materi yang paling sesuai.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/62895611328080?text=Halo%20Mercy%20Global%20English,%20saya%20ingin%20konsultasi%20program%20belajar." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
+            <a class="btn btn-light" href="#gallery"><i class="fa-solid fa-camera"></i> Lihat Dokumentasi</a>
+          </div>
+        </div>
+        <div class="contact-card reveal delay-2">
+          <ul class="contact-list">
+            <li><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><br>08956-1132-8080</div></li>
+            <li><i class="fa-solid fa-location-dot"></i><div><strong>Learning Space</strong><br>Online class & supported learning environment</div></li>
+            <li><i class="fa-solid fa-clock"></i><div><strong>Flexible Schedule</strong><br>Group, semi-private, dan private sesuai kebutuhan.</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="mge_assets/logo-mercy-global-english.png" alt="Mercy Global English Logo"><div><strong>Mercy Global English</strong><p>Professional English course and IELTS preparation with a focused, interactive, and supportive learning atmosphere.</p><div class="socials"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div></div>
+        <div><div class="footer-title">Navigasi</div><div class="footer-links"><a href="#about">Tentang</a><a href="#batch">Batch 4</a><a href="#programs">Program</a><a href="#gallery">Galeri</a></div></div>
+        <div><div class="footer-title">Program</div><ul class="footer-links"><li>Speaking</li><li>Grammar & Writing</li><li>Listening</li><li>IELTS Prep</li></ul></div>
+        <div><div class="footer-title">Kontak</div><ul class="footer-links"><li>WhatsApp: 08956-1132-8080</li><li>Email: hello@mercyglobalenglish.id</li><li>Indonesia</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Mercy Global English. All rights reserved.</span><span>Premium education landing page.</span></div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/62895611328080?text=Halo%20Mercy%20Global%20English,%20saya%20ingin%20bertanya%20tentang%20program." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i><span>Chat WhatsApp</span></a>
+
+  <div class="modal" id="galleryModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Tutup gambar"><i class="fa-solid fa-xmark"></i></button>
+      <img class="modal-img" id="modalImg" src="" alt="">
+      <div class="modal-info"><strong id="modalTitle">Gallery Photo</strong><span>Mercy Global English Documentation</span></div>
+    </div>
+  </div>
+
+  <script>
+    const loader = document.getElementById('loader');
+    const loadingPercent = document.getElementById('loadingPercent');
+    const loadingFill = document.getElementById('loadingFill');
+    const promoPopup = document.getElementById('promoPopup');
+    const promoClose = document.getElementById('promoClose');
+    const promoExplore = document.getElementById('promoExplore');
+    let loadingValue = 0;
+
+    const loadingTimer = setInterval(() => {
+      loadingValue += Math.floor(Math.random() * 8) + 5;
+      if (loadingValue >= 100) loadingValue = 100;
+      loadingPercent.textContent = loadingValue + '%';
+      loadingFill.style.width = loadingValue + '%';
+      if (loadingValue === 100) {
+        clearInterval(loadingTimer);
+        setTimeout(() => {
+          loader.classList.add('hide');
+          showPromo();
+        }, 520);
+      }
+    }, 86);
+
+    window.addEventListener('load', () => {
+      loadingValue = 100;
+      loadingPercent.textContent = '100%';
+      loadingFill.style.width = '100%';
+      setTimeout(() => {
+        loader.classList.add('hide');
+        showPromo();
+      }, 650);
+    });
+
+    function showPromo(){
+      if (promoPopup.dataset.shown === 'true') return;
+      promoPopup.dataset.shown = 'true';
+      setTimeout(() => {
+        promoPopup.classList.add('show');
+        promoPopup.setAttribute('aria-hidden','false');
+        document.body.classList.add('no-scroll');
+      }, 450);
+    }
+    function closePromo(){
+      promoPopup.classList.remove('show');
+      promoPopup.setAttribute('aria-hidden','true');
+      document.body.classList.remove('no-scroll');
+    }
+    promoClose.addEventListener('click', closePromo);
+    promoExplore.addEventListener('click', closePromo);
+    promoPopup.addEventListener('click', (event) => { if(event.target === promoPopup) closePromo(); });
+
+    const navbar = document.getElementById('navbar');
+    const menuBtn = document.getElementById('menuBtn');
+    const pageProgress = document.getElementById('pageProgress');
+    menuBtn.addEventListener('click', () => navbar.classList.toggle('open'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navbar.classList.remove('open')));
+
+    function handleScroll(){
+      navbar.classList.toggle('scrolled', window.scrollY > 18);
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = height ? (scrollTop / height) * 100 : 0;
+      pageProgress.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', handleScroll, {passive:true});
+    handleScroll();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const counters = document.querySelectorAll('[data-count]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.count);
+        let current = 0;
+        const step = Math.max(1, Math.ceil(target / 38));
+        const tick = setInterval(() => {
+          current += step;
+          if(current >= target){ current = target; clearInterval(tick); }
+          el.textContent = target === 100 ? current + '%' : current;
+        }, 28);
+        counterObserver.unobserve(el);
+      });
+    }, {threshold:.75});
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      const ans = item.querySelector('.faq-a');
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if(!isOpen){
+          item.classList.add('open');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      });
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          const show = filter === 'all' || item.dataset.cat === filter;
+          item.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    const modal = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalClose = document.getElementById('modalClose');
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        modalImg.src = item.dataset.src;
+        modalImg.alt = item.dataset.title;
+        modalTitle.textContent = item.dataset.title;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.classList.add('no-scroll');
+      });
+    });
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      modalImg.src = '';
+      document.body.classList.remove('no-scroll');
+    }
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => { if(event.target === modal) closeModal(); });
+    window.addEventListener('keydown', (event) => {
+      if(event.key === 'Escape'){
+        closeModal();
+        closePromo();
+      }
+    });
+
+    document.querySelectorAll('.program-card,.exp-card,.trust-item').forEach(card => {
+      card.addEventListener('mousemove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width - .5) * 6;
+        const y = ((event.clientY - rect.top) / rect.height - .5) * -6;
+        card.style.transform = `translateY(-8px) rotateX(${y}deg) rotateY(${x}deg)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+</body>
+</html>
